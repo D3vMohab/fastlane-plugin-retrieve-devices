@@ -30,9 +30,10 @@ module Fastlane
         existing_devices = Spaceship::ConnectAPI::Device.all.map { |ed| { name: ed.name, udid: ed.udid } }
 
         UI.success("Successfully retrieved the following devices")
-
+        
         existing_devices.each do |ed|
           UI.message("UDID: #{ed[:udid]} | NAME: #{ed[:name]}")
+          
         end
 
         Actions.lane_context[SharedValues::DEVICES_FOR_APPLE_CERTIFICATE] = existing_devices
