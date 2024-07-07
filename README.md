@@ -26,6 +26,8 @@ the `retrieve_devices` plugin is able to be used the same as usual plugins.
 
 Run `fastlane run retrieve_devices` for an output of the devices attached to your fastlane certificate.
 
+Run `fastlane run retrieve_devices -o devices.json` for an output of the devices attached to your fastlane certificate and get the json ouput.
+
 ## Example
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
