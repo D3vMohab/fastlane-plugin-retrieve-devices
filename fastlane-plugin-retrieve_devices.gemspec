@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fastlane/plugin/retrieve_devices/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'fastlane-plugin-retrieve_devices'
+  spec.name          = 'fastlane-plugin-retrieve_idevices'
   spec.version       = Fastlane::RetrieveDevices::VERSION
   spec.author        = 'Lachlan Young, BuiltByProxy'
   spec.email         = 'lachlan_young@hotmail.com'
