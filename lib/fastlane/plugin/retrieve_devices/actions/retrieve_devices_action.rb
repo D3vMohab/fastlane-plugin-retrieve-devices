@@ -31,9 +31,11 @@ module Fastlane
 
         UI.success("Successfully retrieved the following devices")
         jsonFile = File.open("devices.json", "w")
+        deviceNum = 0
         existing_devices.each do |ed|
           UI.message("UDID: #{ed[:udid]} | NAME: #{ed[:name]}")
-          jsonFile.write('{"name":"#{ed[:name]}", "udid":"#{ed[:udid]}"}')
+          deviceNum += 1
+          jsonFile.write('{"name":"#{ed[:name]}", "udid":"#{ed[:udid]}", "number":"#{deviceNum}"}')
           if existing_devices.last != eq 
             jsonFile.write(',')
           end
