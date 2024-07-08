@@ -35,8 +35,8 @@ module Fastlane
         existing_devices.each do |ed|
           UI.message("UDID: #{ed[:udid]} | NAME: #{ed[:name]}")
           deviceNum += 1
-          jsonFile.write('{"name":"#{ed[:name]}", "udid":"#{ed[:udid]}", "number":"#{deviceNum}"}')
-          if existing_devices.last != eq 
+          jsonFile.write("{\"name\":\"#{ed[:name]}\", \"udid\":\"#{ed[:udid]}\", \"number\":\"#{deviceNum}\"}")
+          if existing_devices.last != ed 
             jsonFile.write(',')
           end
         end
